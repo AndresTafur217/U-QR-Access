@@ -10,7 +10,7 @@ body {
     height: 100dvh;
     min-height: 100dvh;
     font-family: Arial, sans-serif;
-    background: #000;
+    background: #2c2c2c;
     display: flex;
     justify-content: center;
     align-items: center;
