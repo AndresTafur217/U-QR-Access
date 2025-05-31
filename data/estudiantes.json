@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "nombre": "Juan Pérez",
+    "correo": "juan@email.com",
+    "fecha_nacimiento": "1999-05-15",
+    "id_programa": 1,
+    "contraseña": "123456",
+    "qr_token": null,
+    "qr_expiracion": null
+  },
+  {
+    "id": 2,
+    "nombre": "María García",
+    "correo": "maria@email.com",
+    "fecha_nacimiento": "2000-08-22",
+    "id_programa": 2,
+    "contraseña": "abcdef",
+    "qr_token": null,
+    "qr_expiracion": null
+  },
+  {
+  "id": 3,
+  "nombre": "Carlos Pelaez",
+  "correo": "carlos@email.com", 
+  "fecha_nacimiento": "2000-01-01",
+  "id_programa": 1,
+  "contraseña": "carlos123",
+  "qr_token": null,
+  "qr_expiracion": null
+  }
+]

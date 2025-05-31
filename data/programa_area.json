@@ -1,0 +1,38 @@
+[
+  {
+    "id_programa": 1,
+    "id_area": 1
+  },
+  {
+    "id_programa": 1,
+    "id_area": 3
+  },
+  {
+    "id_programa": 2,
+    "id_area": 1
+  },
+  {
+    "id_programa": 2,
+    "id_area": 2
+  },
+  {
+    "id_programa": 2,
+    "id_area": 3
+  },
+  {
+    "id_programa": 3,
+    "id_area": 1
+  },
+  {
+    "id_programa": 3,
+    "id_area": 3
+  },
+  {
+    "id_programa": 3,
+    "id_area": 4
+  },
+  {
+  "id_programa": 1,
+  "id_area": 1
+}
+]

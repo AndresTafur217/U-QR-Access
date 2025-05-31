@@ -1,0 +1,17 @@
+[
+  {
+    "id": 1,
+    "nombre": "Finanzas",
+    "duracion": "8 semestres"
+  },
+  {
+    "id": 2,
+    "nombre": "Ingeniería Química",
+    "duracion": "10 semestres"
+  },
+  {
+    "id": 3,
+    "nombre": "Medicina",
+    "duracion": "12 semestres"
+  }
+]

@@ -1,0 +1,22 @@
+[
+  {
+    "id": 1,
+    "nombre": "Biblioteca",
+    "descripcion": "Área de estudio y consulta bibliográfica"
+  },
+  {
+    "id": 2,
+    "nombre": "Laboratorio Químico",
+    "descripcion": "Laboratorio para prácticas de química"
+  },
+  {
+    "id": 3,
+    "nombre": "Sala de Computadores",
+    "descripcion": "Área con equipos de cómputo"
+  },
+  {
+    "id": 4,
+    "nombre": "Laboratorio de Anatomía",
+    "descripcion": "Laboratorio para estudios médicos"
+  }
+]
