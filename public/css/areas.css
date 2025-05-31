@@ -23,7 +23,7 @@ body{
     box-shadow: 0px 0px 20px #000;
     margin: 20px auto;
     padding: 20px;
-    min-width: 400px;
+    min-width: 300px;
     border-radius: 30px;
     background: #e2e2e2aa;
     display: flex;
@@ -193,7 +193,7 @@ body{
 
 .modal-content {
     width: 40%;
-    min-width: 400px;
+    min-width: 300px;
     max-width: 90%;
     height: 80%;
     min-height: 400px;
