@@ -94,7 +94,7 @@ function mostrarQRExistente() {
 async function generarQR() {
     try {
         const ahora = new Date();
-        const expiracion = new Date(ahora.getTime() + 10 * 60 * 1000);
+        const expiracion = new Date(ahora.getTime() + 20 * 60 * 1000);
         const token = `STU${estudiante.id}_${ahora.getTime()}_${Math.random().toString(36).substr(2, 9).toUpperCase()}`;
 
         estudiante.qr_token = token;
