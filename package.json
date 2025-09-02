@@ -4,17 +4,23 @@
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build:style": "npx @tailwindcss/cli -i ./input.css -o ./public/assets/output.css --watch",
+    "dev": "concurrently \"npm run build:style\" \"npm start\""
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "description": "Sistema de acceso con QR",
   "dependencies": {
+    "@tailwindcss/cli": "^4.1.12",
     "cors": "^2.8.5",
-    "express": "^4.18.2"
+    "express": "^4.18.2",
+    "tailwindcss": "^4.1.12"
   },
   "engines": {
     "node": ">=16.x"
+  },
+  "devDependencies": {
+    "concurrently": "^9.2.1"
   }
 }

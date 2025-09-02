@@ -1,57 +1,88 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>UniLibre</title>
-    <link rel="icon" href="./img/favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="/css/index.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>UniLibre</title>
+  <link rel="icon" href="./assets/logoQR.svg" type="image/x-icon">
+  <link rel="stylesheet" href="./assets/output.css">
 </head>
-<body>
-    <div class="contenedor">
-        <div class="head">
-            <img class="imagen" src="./img/UniversidadLibre.png" alt="Universidad Libre">
+<body class="relative font-bold w-dvw h-dvh m-0 p-0 flex bg-gradient-to-bl 
+to-purple-700 from-green-700 overflow-hidden">
+  <div class="absolute -top-500 -left-300 z-0 size-700 flex rounded-full bg-gradient-to-tr 
+    to-blue-50/5 via-blue-50/0 from-blue-600/70"></div>
+  <div class="absolute top-5 left-5 z-0 size-70 flex rounded-4xl bg-black/10"></div>
+  <div class="absolute top-75 left-75 z-0 size-40 flex rounded-4xl bg-black/10"></div>
+  <div class="absolute top-50 left-80 z-0 size-20 flex rounded-2xl bg-black/20"></div>
+  <div class="absolute top-120 left-73 z-0 size-20 flex rounded-3xl bg-black/20"></div>
+  <div class="absolute top-85 left-20 z-0 size-50 flex rounded-4xl bg-black/25"></div>
+  
+  <div class="absolute -bottom-720 -right-500 z-0 size-900 flex rounded-full bg-gradient-to-bl 
+    to-blue-50/5 via-blue-50/0 from-emerald-600/70"></div>
+  <div class="absolute bottom-5 right-5 z-0 size-70 flex rounded-4xl bg-black/10"></div>
+  <div class="absolute bottom-75 right-75 z-0 size-40 flex rounded-4xl bg-black/10"></div>
+  <div class="absolute bottom-5 right-85 z-0 size-40 flex rounded-4xl bg-black/10"></div>
+  <div class="absolute bottom-50 right-80 z-0 size-20 flex rounded-2xl bg-black/20"></div>
+  <div class="absolute bottom-120 right-73 z-0 size-20 flex rounded-3xl bg-black/20"></div>
+  <div class="absolute bottom-85 right-20 z-0 size-50 flex rounded-4xl bg-black/25"></div>
+  <div class="w-dvw h-dvh m-0 p-0 flex justify-center items-center overflow-hidden">
+    <div class="w-500 h-200 flex justify-center items-center overflow-hidden">
+      <div class="relative z-10 m-5 w-180 min-w-100 h-200 min-h-75 flex flex-col gap-5 justify-start 
+        items-center overflow-hidden rounded-4xl bg-white/70 shadow-2xl">
+        <div class="absolute border-b-8 border-blue-300/80 size-225 sm:size-225 md:size-250 
+          lg:size-300 -mt-100 sm:-mt-100 md:-mt-125 lg:-mt-175 p-10 rounded-full shadow-2xl flex 
+          justify-center items-end bg-blue-900/90">
         </div>
-        <div class="contenido">
-            <div class="botones">
-                <a class="login" onclick="openModal()">Iniciar Sesion</a>
-                <a class="areas" href="/areas.html">areas</a>
-            </div>
+        <div class="z-20 w-full my-20 p-5 flex flex-row justify-center items-center gap-5">
+          <img class="w-55 drop-shadow-2xl" src="../assets/logoQR.svg" alt="Corporation Logo">
+          <span class="text-7xl">QR Access</span>
         </div>
+        <div class="w-full my-10 flex-1 p-10">
+          <div class="w-full flex-1 flex flex-row justify-center items-center p-5 gap-5">
+            <a class="w-50 h-20 rounded-2xl flex justify-center items-center font-bold text-lg 
+              bg-sky-700 shadow-2xl transition-all ease-in-out hover:bg-sky-600 
+              hover:text-gray-200 hover:scale-105 cursor-pointer" onclick="openModal()">Iniciar Sesion</a>
+            <a class="w-50 h-20 rounded-2xl flex justify-center items-center font-bold text-lg 
+              bg-teal-700 shadow-2xl transition-all ease-in-out hover:bg-teal-600 
+              hover:text-gray-200 hover:scale-105 cursor-pointer" href="/areas.html">areas</a>
+          </div>
+        </div>
+      </div>
     </div>
+  </div>
 
-    <!-- Modal para inicio de sesion -->
-    <div id="loginModal" class="modal">
-        <div class="modal-content">
-            <span class="close" onclick="closeModal()">
-                <svg class="icon-close" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
-                    <!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free 
-                    Copyright 2025 Fonticons, Inc.-->
-                    <path d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 
-                    0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 
-                    12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z"/>
-                </svg>
-            </span>
-            <div class="head-modal">
-                <h2 class="titulo-modal">Iniciar Sesión</h2>
-            </div>
-            <hr>
-            <div class="usuario">
-                <label for="correo">Correo:</label>
-                <input type="email" id="correo" placeholder="Ingresa tu correo" />
-            </div>
-            <div class="contraseña">
-                <label for="contraseña">Contraseña:</label>
-                <input type="password" id="contraseña" placeholder="Ingresa tu contraseña" />
-            </div>
-            <hr>
-            <div class="ingresar">
-                <button onclick="login()">Ingresar</button>
-            </div>
-            <div id="mensaje"></div>
-        </div>
+  <div id="loginModal" 
+    class="fixed top-0 left-0 z-50 w-full h-full bg-black/50 flex justify-center items-center 
+      invisible opacity-0 transition-opacity duration-300">
+    <div class="bg-white/60 p-6 rounded-3xl shadow-2xl relative w-100 flex flex-col gap-5 justify-center items-center">
+      <span onclick="closeModal()" 
+          class="absolute top-3 right-3 text-gray-600 cursor-pointer transition-all ease-in-out hover:scale-105 hover:text-black">
+        <svg width="10" height="10">
+          <use xlink:href="./assets/sprite.svg#close" />
+        </svg>
+      </span>
+
+      <h2 class="w-full text-center text-2xl font-bold mb-4">Iniciar Sesión</h2>
+      
+      <div class="mb-3 mx-5 w-full">
+        <label for="correo" class="block text-sm font-medium">Correo</label>
+        <input type="email" id="correo" class="w-full p-2 border rounded-2xl" placeholder="Ingresa tu correo" />
+      </div>
+      
+      <div class="mb-3 mx-5 w-full">
+        <label for="contraseña" class="block text-sm font-medium">Contraseña</label>
+        <input type="password" id="contraseña" class="w-full p-2 border rounded-2xl" placeholder="Ingresa tu contraseña" />
+      </div>
+      
+      <button onclick="login()" 
+          class="w-3/5 bg-blue-600 text-white py-2 rounded-2xl cursor-pointer hover:scale-105 hover:shadow-2xl hover:bg-blue-700 
+            transition-all ease-in-out">
+        Ingresar
+      </button>
+      
+      <div id="mensaje" class="mt-3 text-center font-bold text-sm"></div>
     </div>
-    
-    <script src="/js/login.js"></script>
+  </div>
+  <script src="./js/login.js"></script>
 </body>
 </html>

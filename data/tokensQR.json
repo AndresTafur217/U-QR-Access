@@ -1,1 +1,9 @@
-{}
+{
+  "1": {
+    "token": "STU1_1756827975688_REM5SF7SU",
+    "expiracion": "2025-09-02T16:06:15.688Z",
+    "estudiante_id": 1,
+    "nombre": "Juan Pérez",
+    "id_programa": 1
+  }
+}
