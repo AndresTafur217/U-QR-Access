@@ -2,12 +2,22 @@ function openModal() {
   const modal = document.getElementById('loginModal');
   modal.classList.remove('invisible', 'opacity-0');
   modal.classList.add('visible', 'opacity-100');
+  
+  const content = modal.querySelector('div');
+  content.classList.remove('animate-slide-out-top');
+  void content.offsetWidth;
+  content.classList.add('animate-slide-in-top');
 }
 
 function closeModal() {
   const modal = document.getElementById('loginModal');
   modal.classList.remove('visible', 'opacity-100');
   modal.classList.add('invisible', 'opacity-0');
+  
+  const content = modal.querySelector('div');
+  content.classList.remove('animate-slide-in-top');
+  void content.offsetWidth;
+  content.classList.add('animate-slide-out-top');
 }
 
 window.addEventListener('click', function(event) {

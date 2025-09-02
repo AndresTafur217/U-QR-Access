@@ -26,14 +26,14 @@ to-purple-700 from-green-700 overflow-hidden">
   <div class="absolute bottom-120 right-73 z-0 size-20 flex rounded-3xl bg-black/20"></div>
   <div class="absolute bottom-85 right-20 z-0 size-50 flex rounded-4xl bg-black/25"></div>
   <div class="w-dvw h-dvh m-0 p-0 flex justify-center items-center overflow-hidden">
-    <div class="w-500 h-200 flex justify-center items-center overflow-hidden">
+    <div class="w-500 h-200 flex justify-center items-center">
       <div class="relative z-10 m-5 w-180 min-w-100 h-200 min-h-75 flex flex-col gap-5 justify-start 
-        items-center overflow-hidden rounded-4xl bg-white/70 shadow-2xl">
+        items-center overflow-hidden rounded-4xl bg-white/70 shadow-2xl animate-pulse-fade-in">
         <div class="absolute border-b-8 border-blue-300/80 size-225 sm:size-225 md:size-250 
           lg:size-300 -mt-100 sm:-mt-100 md:-mt-125 lg:-mt-175 p-10 rounded-full shadow-2xl flex 
           justify-center items-end bg-blue-900/90">
         </div>
-        <div class="z-20 w-full my-20 p-5 flex flex-row justify-center items-center gap-5">
+        <div class="z-20 w-full my-20 p-5 flex flex-row justify-center items-center gap-5 animate-blurred-fade-in animate-duration-1000 animate-delay-400">
           <img class="w-55 drop-shadow-2xl" src="../assets/logoQR.svg" alt="Corporation Logo">
           <span class="text-7xl">QR Access</span>
         </div>
@@ -41,10 +41,10 @@ to-purple-700 from-green-700 overflow-hidden">
           <div class="w-full flex-1 flex flex-row justify-center items-center p-5 gap-5">
             <a class="w-50 h-20 rounded-2xl flex justify-center items-center font-bold text-lg 
               bg-sky-700 shadow-2xl transition-all ease-in-out hover:bg-sky-600 
-              hover:text-gray-200 hover:scale-105 cursor-pointer" onclick="openModal()">Iniciar Sesion</a>
+              hover:text-gray-200 hover:scale-105 cursor-pointer animate-slide-up-fade" onclick="openModal()">Iniciar Sesion</a>
             <a class="w-50 h-20 rounded-2xl flex justify-center items-center font-bold text-lg 
               bg-teal-700 shadow-2xl transition-all ease-in-out hover:bg-teal-600 
-              hover:text-gray-200 hover:scale-105 cursor-pointer" href="/areas.html">areas</a>
+              hover:text-gray-200 hover:scale-105 cursor-pointer animate-slide-up-fade" href="/areas.html">areas</a>
           </div>
         </div>
       </div>
@@ -53,8 +53,10 @@ to-purple-700 from-green-700 overflow-hidden">
 
   <div id="loginModal" 
     class="fixed top-0 left-0 z-50 w-full h-full bg-black/50 flex justify-center items-center 
-      invisible opacity-0 transition-opacity duration-300">
-    <div class="bg-white/60 p-6 rounded-3xl shadow-2xl relative w-100 flex flex-col gap-5 justify-center items-center">
+      invisible opacity-0 transition-opacity duration-300
+      animate-duration-1000 animate-delay-200">
+    <div class="bg-white/60 p-6 rounded-3xl shadow-2xl relative w-100 flex flex-col gap-5 justify-center items-center 
+      ">
       <span onclick="closeModal()" 
           class="absolute top-3 right-3 text-gray-600 cursor-pointer transition-all ease-in-out hover:scale-105 hover:text-black">
         <svg width="10" height="10">
