@@ -1414,6 +1414,11 @@
       width: calc(var(--spacing) * 180);
     }
   }
+  .sm\:w-200 {
+    @media (width >= 40rem) {
+      width: calc(var(--spacing) * 200);
+    }
+  }
   .sm\:flex-row {
     @media (width >= 40rem) {
       flex-direction: row;
