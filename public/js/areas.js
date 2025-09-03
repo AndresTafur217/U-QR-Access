@@ -7,6 +7,7 @@ let canvas = null;
 let context = null;
 let scanning = false;
 let animationFrame = null;
+let codeReader = null;
 
 window.onload = async function() {
   await cargarDatos();
@@ -217,33 +218,32 @@ async function abrirScanner() {
 }
 
 async function escanearQR() {
-  if (!scanning || !video) {
-    console.log('Escaneo detenido o video no disponible');
-    return;
-  }
+  if (!video) return;
 
-  if (video.readyState !== video.HAVE_ENOUGH_DATA) {
-    animationFrame = requestAnimationFrame(escanearQR);
-    return;
+  if (!codeReader) {
+    codeReader = new ZXing.BrowserMultiFormatReader();
   }
 
   try {
-    const codeReader = new ZXing.BrowserMultiFormatReader();
-    const result = await codeReader.decodeFromCanvas(video);
+    // Escaneo continuo directamente del video
+    await codeReader.decodeFromVideoDevice(null, video, (result, err) => {
+      if (result) {
+        console.log("🎉 QR detectado:", result.getText());
+        scanning = false;
 
-    if (result) {
-      console.log('🎉 QR detectado:', result.getText());
-      scanning = false;
-      document.getElementById('scanningIndicator').style.display = 'none';
-      validarAcceso(result.getText().trim());
-      codeReader.reset();
-      return;
-    }
+        document.getElementById("scanningIndicator").style.display = "none";
+        validarAcceso(result.getText().trim());
+
+        // 🔑 detener el lector para liberar cámara
+        codeReader.reset();
+      }
+
+      if (err && !(err instanceof ZXing.NotFoundException)) {
+        console.error("Error de ZXing:", err);
+      }
+    });
   } catch (error) {
-  }
-
-  if (scanning) {
-    animationFrame = requestAnimationFrame(escanearQR);
+    console.error("Error en escaneo:", error);
   }
 }
 
