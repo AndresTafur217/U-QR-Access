@@ -1,1 +1,9 @@
-{}
+{
+  "1": {
+    "token": "STU1_1756860376090_NXH489JOE",
+    "expiracion": "2025-09-03T01:06:16.090Z",
+    "estudiante_id": 1,
+    "nombre": "Juan Pérez",
+    "id_programa": 1
+  }
+}

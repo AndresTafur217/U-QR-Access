@@ -57,7 +57,7 @@ function mostrarAreas() {
 
   areas.forEach(area => {
     const areaCard = document.createElement('div');
-    areaCard.className = 'bg-stone-200 backdrop-blur-sm rounded-3xl p-6 cursor-pointer transition-all ease-in-out border border-stone-300 flex flex-col justify-between gap-2.5 hover:scale-105 hover:bg-stone-300 hover:shadow-xs';
+    areaCard.className = 'm-5 sm:m-0 bg-stone-200 backdrop-blur-sm rounded-3xl p-6 cursor-pointer transition-all ease-in-out flex flex-col justify-between gap-2.5 hover:scale-105 hover:bg-stone-300 hover:shadow-xs';
     areaCard.onclick = () => intentarIngresar(area.id);
     areaCard.innerHTML = `
       <div class="text-xl font-bold mb-2.5">${area.nombre}</div>
@@ -223,14 +223,13 @@ async function escanearQR() {
   }
 
   if (video.readyState !== video.HAVE_ENOUGH_DATA) {
-    console.log('Video no listo, reintentando...');
     animationFrame = requestAnimationFrame(escanearQR);
     return;
   }
 
   try {
     const codeReader = new ZXing.BrowserMultiFormatReader();
-    const result = await codeReader.decodeFromVideoElement(video);
+    const result = await codeReader.decodeFromCanvas(video);
 
     if (result) {
       console.log('🎉 QR detectado:', result.getText());
@@ -240,15 +239,11 @@ async function escanearQR() {
       codeReader.reset();
       return;
     }
-
-    if (scanning) {
-      animationFrame = requestAnimationFrame(escanearQR);
-    }
-
   } catch (error) {
-    if (scanning) {
-      animationFrame = requestAnimationFrame(escanearQR);
-    }
+  }
+
+  if (scanning) {
+    animationFrame = requestAnimationFrame(escanearQR);
   }
 }
 

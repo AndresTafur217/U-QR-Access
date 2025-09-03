@@ -8,36 +8,37 @@
   <link rel="stylesheet" href="./assets/output.css">
 </head>
 <body class="relative font-bold w-dvw h-dvh m-0 p-0 flex bg-gradient-to-bl 
-  to-purple-700 from-green-700 overflow-hidden">
-  <div class="absolute -top-500 -left-300 z-0 size-700 flex rounded-full bg-gradient-to-tr 
-    to-blue-50/5 via-blue-50/0 from-blue-600/70"></div>
-  <div class="absolute top-5 left-5 z-0 size-70 flex rounded-4xl bg-black/10"></div>
-  <div class="absolute top-75 left-75 z-0 size-40 flex rounded-4xl bg-black/10"></div>
-  <div class="absolute top-50 left-80 z-0 size-20 flex rounded-2xl bg-black/20"></div>
-  <div class="absolute top-120 left-73 z-0 size-20 flex rounded-3xl bg-black/20"></div>
-  <div class="absolute top-85 left-20 z-0 size-50 flex rounded-4xl bg-black/25"></div>
-  
-  <div class="absolute -bottom-720 -right-500 z-0 size-900 flex rounded-full bg-gradient-to-bl 
-    to-blue-50/5 via-blue-50/0 from-emerald-600/70"></div>
-  <div class="absolute bottom-5 right-5 z-0 size-70 flex rounded-4xl bg-black/10"></div>
-  <div class="absolute bottom-75 right-75 z-0 size-40 flex rounded-4xl bg-black/10"></div>
-  <div class="absolute bottom-5 right-85 z-0 size-40 flex rounded-4xl bg-black/10"></div>
-  <div class="absolute bottom-50 right-80 z-0 size-20 flex rounded-2xl bg-black/20"></div>
-  <div class="absolute bottom-120 right-73 z-0 size-20 flex rounded-3xl bg-black/20"></div>
-  <div class="absolute bottom-85 right-20 z-0 size-50 flex rounded-4xl bg-black/25"></div>
+  to-purple-700 from-green-700 overflow-hidden overscroll-x-none overscroll-y-none">
+  <div class="absolute inset-0 overflow-hidden">
+    <div class="absolute -top-500 -left-300 z-0 size-700 flex rounded-full bg-gradient-to-tr 
+      to-blue-50/5 via-blue-50/0 from-blue-600/70 overflow-hidden"></div>
+    <div class="absolute top-5 left-5 z-0 size-70 flex rounded-4xl bg-black/10 overflow-hidden"></div>
+    <div class="absolute top-75 left-75 z-0 size-40 flex rounded-4xl bg-black/10 overflow-hidden"></div>
+    <div class="absolute top-50 left-80 z-0 size-20 flex rounded-2xl bg-black/20 overflow-hidden"></div>
+    <div class="absolute top-120 left-73 z-0 size-20 flex rounded-3xl bg-black/20 overflow-hidden"></div>
+    <div class="absolute top-85 left-20 z-0 size-50 flex rounded-4xl bg-black/25 overflow-hidden"></div>
+    
+    <div class="absolute -bottom-720 -right-500 z-0 size-900 flex rounded-full bg-gradient-to-bl 
+      to-blue-50/5 via-blue-50/0 from-emerald-600/70 overflow-hidden"></div>
+    <div class="absolute bottom-5 right-5 z-0 size-70 flex rounded-4xl bg-black/10 overflow-hidden"></div>
+    <div class="absolute bottom-75 right-75 z-0 size-40 flex rounded-4xl bg-black/10 overflow-hidden"></div>
+    <div class="absolute bottom-5 right-85 z-0 size-40 flex rounded-4xl bg-black/10 overflow-hidden"></div>
+    <div class="absolute bottom-50 right-80 z-0 size-20 flex rounded-2xl bg-black/20 overflow-hidden"></div>
+    <div class="absolute bottom-120 right-73 z-0 size-20 flex rounded-3xl bg-black/20 overflow-hidden"></div>
+    <div class="absolute bottom-85 right-20 z-0 size-50 flex rounded-4xl bg-black/25 overflow-hidden"></div>
+  </div>
 
   <div class="w-dvw h-dvh m-0 p-0 flex justify-center items-center overflow-hidden">
-    <div class="w-500 h-200 flex justify-center items-center">
-      <div class="relative z-10 p-5 m-5 w-180 min-w-100 h-200 min-h-75 flex flex-col gap-5 justify-start 
+      <div class="relative z-10 p-5 m-5 w-180 min-w-60 h-200 min-h-75 flex flex-col gap-5 justify-start 
         items-center overflow-hidden rounded-4xl bg-white/70 shadow-2xl animate-pulse-fade-in">
         <div class="box-border w-full h-full overflow-auto scrollbar">
           <div class="w-full h-17.5 flex flex-row justify-between gap-5 items-center overflow-hidden">
             <h1 class="h-full text-center flex justify-center items-center flex-1 text-3xl 
               font-bold bg-stone-200/90 rounded-3xl">Bienvenido</h1>
 
-            <span class="w-17.5 h-full p-3.5 flex items-center justify-center cursor-pointer mx-2.5 
+            <span class="w-12.5 sm:w-17.5 h-full p-1.5 sm:p-3.5 flex items-center justify-center cursor-pointer mx-2.5 
               transition-all ease-in-out hover:scale-105 hover:bg-stone-200/90
-              rounded-3xl" onclick="cerrarSesion()">
+              rounded-2xl sm:rounded-3xl" onclick="cerrarSesion()">
 
               <svg width="40" height="40">
                 <use xlink:href="./assets/sprite.svg#back" />
@@ -92,7 +93,6 @@
           </div>
         </div>
       </div>
-    </div>
   </div>
 
   <script src="/js/perfil.js"></script>
